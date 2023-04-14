@@ -19,6 +19,15 @@ estandar actual del CSS: CSS3
 CSS: da stilo, color, posicion, alineacion, fuente de texto 
 Usando lo siguiente hace que toda las etiquetas tengan el texto con color rojo: h1{color: red;}
 
+Ejemplo:     
+h1, h2, h3 { color: red; } 
+o lo que es lo mismo 
+h1 {color: red;} 
+h2 {color: red;} 
+h3 {color: red;} 
+
+Tipo de letra => font-family: "Arial"
+
 Tipos de selectores:
 
 - Selector universal (se le aplica a toda la pagina): *{atributo:valor;}
@@ -27,6 +36,37 @@ Tipos de selectores:
 - Selector identificador (el nombre del id puede ser cualquier nombre): #id{atributo:valor;}
 - Selector descendiente (ejemplos de selectores: div,p,h1): selector1 selector2 selectorN {atributo:valor;}
 ...Del Selector descendiente: Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del elemento padre
+Combinación de selectores: div, p {color:orange;} /* El estilo se aplica a todos los divs y párrafos */
+
+Nombrar correctamente los selectores:
+#div1, .div, divContent
+/* Opción 1: Palabras separadas por mayúsculas */
+navMenu { padding: 2em; border: 2px solid green; }
+/* Opción 2: Palabras separadas por guiones */
+nav-menu { padding: 2em; border: 2px solid green; }
+
+Utilizar selectores descendientes:
+Es conveniente utilizar selectores descendientes siempre que sea posible antes de crear un selector clase 
+o un selector identificador. De esta forma, el código estará más limpio, dispondrá de menos selectores clase 
+e identificador y se comprenderá mucho mejor.
+div p {  color: red; }
+
+Utilizar propiedades abreviadas:
+/* Propiedades margin-left, margin-right y margin-top */
+.nav-menu {margin-left: 5px; margin-right: 5px; margin-top: 5px;}
+/* Propiedad abreviada margin */
+.nav-menu {margin: 5px 5px 0px 5px;}
+
+Evitar utilizar como nombre de un selector una característica visual:
+/* Selector con nombre que define la característica visual del color */
+.menu-red { background: red; }
+/* Utilizar mejor: */
+.nav-menu { background: red; }
+
+Very Important: Probar el diseño en los diferentes navegadores
+
+Aplicar estilos CSS en un documento HTML:
+&lt;p style="color:green"&gt;Párrafo de color verde.&lt;/p&gt;
 
 Se puede poner el codigo CSS dentro del archivo CSS, este codigo debe estar dentro de la etiqueta &lt;head&gt;&lt;/head&gt;
 de la forma siguiente:
