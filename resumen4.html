@@ -5,20 +5,512 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusLand</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="prism.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 	<script src="prism.js"></script>
 </head>
 <body>
-    <h1></h1>
-    <p><img src="img/"></p>
-    <h2></h2>
-    <pre>
-        <code class="language-html">
+    <h1>Frameworsk CSS</h1>
+<pre><code class="language-html">Los frameworks se utilizan en el ámbito de la programación de aplicaciones desde hace décadas. 
+Recientemente han comenzado a utilizarse para programar y diseñar aplicaciones web, por lo que ya existen decenas de frameworks para CSS.
+
+Genéricamente, un framework es un conjunto de herramientas, librerías, convenciones y buenas prácticas 
+que pretenden encapsular las tareas repetitivas en módulos genéricos fácilmente reutilizables.
+De la misma forma, un framework CSS es un conjunto de herramientas, hojas de estilos y buenas prácticas que permiten 
+al diseñador web olvidarse de las tareas repetitivas para centrarse en los elementos únicos de cada diseño en los que puede aportar valor.
 </code></pre>
+<h2>Algunos Frameworks CSS</h2>
+<center><p><img src="img/f1.PNG"></p></center>
+<pre><code class="language-html">Bootstrap: es una librería de estilos CSS, es decir, es un archivo CSS que añades en tus proyectos para tener una 
+serie de estilos ya preparados para utilizar.
+
+Este tipo de librerías CSS suelen incluir estilos para los elementos más comunes de una página web, como 
+por ejemplo, botones, tarjetas, navbars, etc. Además tiene una serie de estilos para crear columnas fácilmente.
+
+Recuerda para usar Bootstrap debes agregar en head: &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt; 
+De forma que quedaria algo asi:
+
+&lt;head&gt;
+
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+Elementos Bootstrap: 
+
+Containers: sirven para crear una “caja” o “contenedor” sobre la que va el contenido 
+de una página web.
+Cuando le aplicas a un elemento HTML la clase container lo que ocurre es que a ese elemento se le aplica un ancho 
+y un padding determinado y además se coloca en el centro de la página web.
+
+Ejemplo: 
+&lt;div class="container"&gt;
+  &lt;p&gt;
+    Este párrafo va dentro de un container
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<h3>Resultado container:</h3>
+<div class="container">
+  <p>
+    Este párrafo va dentro de un container
+  </p>
+</div>
+
+<pre><code class="language-html">Columnas: Para crear columnas, se debe crear un elemento HTML padre (&lt;div&gt;) con la etiqueta row. Esta 
+etiqueta le dice a Bootstrap que el contenido se va representar en columnas.
+Bootstrap se basa en un sistema de 12 columnas, es decir, teniendo 12 columnas en total, si quieres crear dos 
+columnas de igual tamaño, tienes que crear 2 columnas de 6. Si quieres 3 columnas tienes que 
+crear 3 columnas de 4 porque 3 * 4 = 12 columnas en total.
+Para crear columnas tienes que usar la clase col, seguido de otra clase con el ancho que se dedea del 1 al 12, 
+por ejemplo: col-6, col-3, col-2, etc.
+
+Ejemplo creado dos columnas de igual tamaño:
+
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col col-6"&gt;
+      Primera columna
+    &lt;/div&gt;
+    &lt;div class="col col-6"&gt;
+      Segunda columna
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>Resultado de dos columnas de igual tamaño:</h3>
+<div class="container">
+  <div class="row">
+    <div class="col col-6">
+      Primera columna
+    </div>
+    <div class="col col-6">
+      Segunda columna
+    </div>
+  </div>
+</div>
+
+<pre><code class="language-html">Ejemplo con columnas de diferente tamaño:
+
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col col-2"&gt;
+      Primera columna más pequeña
+    &lt;/div&gt;
+    &lt;div class="col col-6"&gt;
+      Segunda columna mucho más grande que las otras
+    &lt;/div&gt;
+    &lt;div class="col col-2"&gt;
+      Tercera columna más pequeña
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>Resultado de columnas de diferente tamaño</h3>
+<div class="container">
+  <div class="row">
+    <div class="col col-2">
+      Primera columna más pequeña
+    </div>
+    <div class="col col-6">
+      Segunda columna mucho más grande que las otras
+    </div>
+    <div class="col col-2">
+      Tercera columna más pequeña
+    </div>
+  </div>
+</div>
+
+
+<pre><code class="language-html">Ejemplo con columnas de igual tamaño:
+
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;
+      1 of 2
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      1 of 2
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+      1 of 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>Resultado de columnas de igual tamaño</h3>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      1 of 2
+    </div>
+    <div class="col">
+      1 of 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      1 of 3
+    </div>
+  </div>
+</div>
+
+<pre><code class="language-html">El ancho de una columna para cierto dispositivo tienes los siguientes valores:
+- xs ancho de pantalla de más de 576px
+- sm ancho de pantalla de más de 768px
+- md ancho de pantalla de más de 992px
+- lg ancho de pantalla de más de 1200px
+
+Botones: Para crear un botón se debe usar la clase btn. 
+
+&lt;!-- Botón standart --&gt;
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+
+&lt;!-- Botón primario --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+
+&lt;!-- Botón de éxito--&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+
+&lt;!-- Botón de información--&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+
+&lt;!-- Botón de aviso --&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+
+&lt;!-- Botón de peligro--&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+
+&lt;!-- Botón con énfasis en un link--&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+</code></pre>
+<h3>Resultados de los botones:</h3>
+<!-- Botón primario -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Botón de éxito-->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Botón de información-->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Botón de aviso -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Botón de peligro-->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Botón con énfasis en un link-->
+<button type="button" class="btn btn-link">Link</button>
+
+<pre><code class="language-html"> Alertas: Las alertas sirven para mostrar un mensaje al usuario. 
+
+&lt;div class="alert alert-primary" role="alert"&gt;
+    Mensaje de la alerta
+&lt;/div&gt;
+    
+&lt;div class="alert alert-secondary" role="alert"&gt;
+    Mensaje de la alerta
+&lt;/div&gt;
+    
+&lt;div class="alert alert-success" role="alert"&gt;
+    Mensaje de la alerta
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+  Mensaje de la alerta
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+ Mensaje de la alerta
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+ Mensaje de la alerta
+&lt;/div&gt;
+
+&lt;div class="alert alert-light" role="alert"&gt;
+  Mensaje de la alerta
+&lt;/div&gt;
+
+&lt;div class="alert alert-dark" role="alert"&gt;
+ Mensaje de la alerta
+&lt;/div&gt;</code></pre>
+
+<h3>Resutado de las alertas:</h3>
+<div class="alert alert-primary" role="alert">
+    Mensaje de la alerta
+</div>
+  
+<div class="alert alert-secondary" role="alert">
+   Mensaje de la alerta
+</div>
+  
+<div class="alert alert-success" role="alert">
+   Mensaje de la alerta
+</div>
+
+<div class="alert alert-danger" role="alert">
+    Mensaje de la alerta
+</div>
+  
+<div class="alert alert-warning" role="alert">
+   Mensaje de la alerta
+</div>
+  
+<div class="alert alert-info" role="alert">
+   Mensaje de la alerta
+</div>
+  
+<div class="alert alert-light" role="alert">
+    Mensaje de la alerta
+</div>
+  
+<div class="alert alert-dark" role="alert">
+   Mensaje de la alerta
+</div>
+
+<pre><code class="language-html">Breadcrumbs: Los breadcrubs o migas de pan, sirven para mostrar la situación del usuario dentro de una página. 
+Indica al usuario dónde está y de dónde viene. 
+
+&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Sección&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Sección actual&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<h3>Resutado de los Breadcrumbs:</h3>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Sección</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Sección actual</li>
+    </ol>
+</nav>
+
+<pre><code class="language-html">Cards: Las cards o tarjetas, sirven para agrupar el contenido. 
+Se suelen utilizar para crear listas de elementos, por ejemplo, artículos de blog, tweets, colecciones de elementos, etc. 
+
+&lt;div class="card" style="width: 18rem;"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Título de la tarjeta&lt;/h5&gt;
+    &lt;h6 class="card-subtitle mb-2 text-muted"&gt;Subtítulo&lt;/h6&gt;
+    &lt;p class="card-text"&gt;Contenido de la tarjeta&lt;/p&gt;
+    &lt;a href="#" class="card-link"&gt;Enlace 1&lt;/a&gt;
+    &lt;a href="#" class="card-link"&gt;Enlace 2&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Resutado de los Cards:</h3>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
+    <p class="card-text">Contenido de la tarjeta</p>
+    <a href="#" class="card-link">Enlace 1</a>
+    <a href="#" class="card-link">Enlace 2</a>
+  </div>
+</div>
+
+<pre><code class="language-html">Otro ejemplo de Cards:
+
+&lt;div class="card border-primary mb-3" style="max-width: 18rem;"&gt;
+  &lt;div class="card-header"&gt;Header&lt;/div&gt;
+  &lt;div class="card-body text-primary"&gt;
+    &lt;h5 class="card-title"&gt;Tarjeta con borde&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Sontenido de la tarjeta&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Resultado de otro ejemplo de Cards:</h3>
+<div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Tarjeta con borde</h5>
+      <p class="card-text">Contenido de la tarjeta</p>
+    </div>
+</div>
+
+
+<pre><code class="language-html">Otro ejemplo de Cards:
+
+&lt;div class="card text-right" style="width: 18rem;"&gt;
+  &lt;div class="card-body"&gt;
+  &lt;h5 class="card-title"&gt;Tarjeta con alineación a la derecha&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Contenido alineado a la derecha&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Botón dentro de la tarjeta&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>Resultado de otro ejemplo de Cards:</h3>
+<div class="card text-right" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Tarjeta con alineación a la derecha</h5>
+    <p class="card-text">Contenido alineado a la derecha</p>
+    <a href="#" class="btn btn-primary">Botón dentro de la tarjeta</a>
+  </div>
+</div>
+
+<pre><code class="language-html">Collapse: Este elemento sirve para poder añadir un botón cuya funcionalidad sea poder ocultar y mostrar cierto contenido, 
+es decir, crear elementos colapsables.
+
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"&gt;
+  Haz clic para mostrar y ocultar el contenido
+&lt;/button&gt;
+&lt;div class="collapse" id="collapseExample"&gt;
+  &lt;div class="card card-body"&gt;
+    Dentro de esta etiqueta puedes añadir todo el contenido que quieres que se muestre al pulsar el botón
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Resultado de Collapse:</h3>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+Haz clic para mostrar y ocultar el contenido
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Dentro de esta etiqueta puedes añadir todo el contenido que quieres que se muestre al pulsar el botón
+  </div>
+</div>
+
+<pre><code class="language-html">Dropdowns: Los dropdowns o multiselect, sirven para que el usuario pueda escoger una opción para un conjunto de posibilidades.
+
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+    Selecciona una opción
+  &lt;/button&gt;
+  &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+    &lt;a class="dropdown-item" href="#"&gt;Opción 1&lt;/a&gt;
+    &lt;a class="dropdown-item" href="#"&gt;Opción 2&lt;/a&gt;
+    &lt;a class="dropdown-item" href="#"&gt;Opción 3&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>Resultado de Dropdowns:</h3>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Selecciona una opción
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Opción 1</a>
+    <a class="dropdown-item" href="#">Opción 2</a>
+    <a class="dropdown-item" href="#">Opción 3</a>
+  </div>
+</div>
+
+<pre><code class="language-html">Modal: Los popups son ventanas emergentes que se abren cuando el usuario interacciona con cierto elemento de una 
+página como un botón o un enlace.
+
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+  Abrir popup
+&lt;/button&gt;
+
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Título del popup&lt;/h5&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        Contenido del popup
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Cerrar&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Acción principal&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Resultado de Modal:</h3>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Abrir popup
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Título del popup</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del popup
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Acción principal</button>
+      </div>
+    </div>
+  </div>
+</div>
+<pre><code class="language-html">Ejemplo de Formulario con Bootstrap:
+
+  &lt;div class="container" class="row align-items-center"&gt;
+  &lt;form&gt;
+      &lt;table class="table table-success table table-striped table-bordered"&gt;
+          &lt;tr&gt;
+              &lt;td colspan="2" style="text-align: center"&gt;&lt;label for="login" class="col-form-label"&gt;login&lt;/label&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;&lt;label for="usuario" class="col-form-label"&gt;Usuario: &lt;/label&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input type="text" name="usuario" id="usuario" maxlength="15" class="form-control"&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;&lt;label for="clave" class="col-form-label"&gt;Contraseña: &lt;/label&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input type="password" name="clave" id="clave" maxlength="8" class="form-control"&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td colspan="2" style="text-align: center;"&gt;&lt;button  class="btn btn-primary"&gt;Ingresar&lt;/button&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Resultado del formulario:</h3>
+<div class="container" class="row align-items-center">
+  <form>
+      <table class="table table-success table table-striped table-bordered">
+          <tr>
+              <td colspan="2" style="text-align: center"><label for="login" class="col-form-label">login</label></td>
+          </tr>
+          <tr>
+              <td><label for="usuario" class="col-form-label">Usuario: </label></td>
+              <td><input type="text" name="usuario" id="usuario" maxlength="15" class="form-control"></td>
+          </tr>
+          <tr>
+              <td><label for="clave" class="col-form-label">Contraseña: </label></td>
+              <td><input type="password" name="clave" id="clave" maxlength="8" class="form-control"></td>
+          </tr>
+          <tr>
+              <td colspan="2" style="text-align: center;"><button  class="btn btn-primary">Ingresar</button></td>
+          </tr>
+      </table>
+  </form>
+</div>
+
+
+
+<p><img src="img/"></p>
     <center><a href=""></a></center>
-<h3>Aqui los documentos (index.html): <a herf=""></a></h3>
-<h3>Aqui el resultado: <a herf=""></a></h3>
+<h3>Aqui los documentos (index.html): <a href=""></a></h3>
+<h3>Aqui el resultado: <a href=""></a></h3>
 <p>_________________________________________________</p>
 </body>
 </html>

@@ -1,4 +1,24 @@
-&lt;p style="color:green"&gt;Párrafo de color verde.&lt;/p&gt;
+&lt;div class="container" class="row align-items-center"&gt;
+  &lt;form&gt;
+      &lt;table class="table table-success table table-striped table-bordered"&gt;
+          &lt;tr&gt;
+              &lt;td colspan="2" style="text-align: center"&gt;&lt;label for="login" class="col-form-label"&gt;login&lt;/label&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;&lt;label for="usuario" class="col-form-label"&gt;Usuario: &lt;/label&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input type="text" name="usuario" id="usuario" maxlength="15" class="form-control"&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;&lt;label for="clave" class="col-form-label"&gt;Contraseña: &lt;/label&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input type="password" name="clave" id="clave" maxlength="8" class="form-control"&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td colspan="2" style="text-align: center;"&gt;&lt;button  class="btn btn-primary"&gt;Ingresar&lt;/button&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+
 
 
 
